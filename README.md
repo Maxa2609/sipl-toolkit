@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/Maxa2609/sipl-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/Maxa2609/sipl-toolkit/actions/workflows/ci.yml)
 
+Автор: Столяр Марія, група ТК-32
+
 Набір інструментів для простої мови програмування **SIPL** (SImple Programming Language) з курсу
 «Теорія програмування»: формальна граматика, парсер, інтерпретатор із трасою виконання, командний
 рядок із JSON-режимом, семантичні терми програм і покрокове обчислення термів.
