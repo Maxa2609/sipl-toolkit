@@ -1,0 +1,1 @@
+IF(S²(or, S²(or, S²(gr, X⇒, 0), S²(gr, Y⇒, 0)), S¹(neg, S²(eq, Z⇒, 0))), AS_R(S²(add, S²(mult, X⇒, -2), Y⇒)), AS_R(-1))

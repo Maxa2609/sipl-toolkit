@@ -1,0 +1,1 @@
+AS_Q(S²(div, X⇒, Y⇒)) · AS_R(S²(mod, X⇒, Y⇒)) · AS_W(S¹(uminus, Y⇒)) · IF(S²(and, S²(le, Q⇒, 5), S²(ne, R⇒, 0)), AS_Z(1), id) · IF(S²(ge, R⇒, 2), AS_Z(2), id) · WH(false, id)

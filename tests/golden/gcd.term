@@ -1,0 +1,1 @@
+WH(S¹(neg, S²(eq, A⇒, B⇒)), IF(S²(gr, A⇒, B⇒), AS_A(S²(sub, A⇒, B⇒)), AS_B(S²(sub, B⇒, A⇒))))

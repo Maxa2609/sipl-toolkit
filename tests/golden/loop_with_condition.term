@@ -1,0 +1,1 @@
+WH(S¹(neg, S²(or, S¹(neg, S²(gr, S²(mult, S²(add, X⇒, 1), 2), 3)), S²(gr, X⇒, 9))), AS_X(S²(add, X⇒, 1)))

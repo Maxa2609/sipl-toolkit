@@ -1,0 +1,1 @@
+IF(S²(gr, 0, X⇒), AS_X(S²(sub, 0, X⇒)), id)

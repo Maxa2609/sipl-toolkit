@@ -1,0 +1,1 @@
+IF(S²(gr, X⇒, Y⇒), AS_M(X⇒), AS_M(Y⇒))

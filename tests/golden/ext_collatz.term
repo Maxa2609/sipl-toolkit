@@ -1,0 +1,1 @@
+AS_C(0) · WH(S²(ne, N⇒, 1), IF(S²(eq, S²(mod, N⇒, 2), 0), AS_N(S²(div, N⇒, 2)), AS_N(S²(add, S²(mult, 3, N⇒), 1))) · AS_C(S²(add, C⇒, 1)))
