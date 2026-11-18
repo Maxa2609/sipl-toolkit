@@ -1,0 +1,12 @@
+{
+ "name": "runtime/infinite_loop",
+ "source": "begin while 0 = 0 do skip end",
+ "expect": {
+  "runs": [
+   {
+    "state": {},
+    "error": "RT-INFINITE-LOOP"
+   }
+  ]
+ }
+}

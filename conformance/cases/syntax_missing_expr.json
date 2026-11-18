@@ -1,0 +1,11 @@
+{
+ "name": "syntax/missing_expr",
+ "source": "begin X := end",
+ "expect": {
+  "syntax_error": {
+   "code": "SYN-EXPECTED-EXPRESSION",
+   "line": 1,
+   "col": 12
+  }
+ }
+}

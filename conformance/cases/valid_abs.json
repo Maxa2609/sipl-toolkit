@@ -1,0 +1,57 @@
+{
+ "name": "valid/abs",
+ "source": "// X := |X|\nbegin\n  if 0 > X then X := 0 - X else skip\nend\n",
+ "expect": {
+  "runs": [
+   {
+    "state": {
+     "X": -4
+    },
+    "final_state": {
+     "X": 4
+    }
+   }
+  ],
+  "term": "IF(S²(gr, 0, X⇒), AS_X(S²(sub, 0, X⇒)), id)",
+  "ast": {
+   "kind": "Program",
+   "body": {
+    "kind": "Block",
+    "body": {
+     "kind": "If",
+     "cond": {
+      "kind": "Compare",
+      "op": ">",
+      "left": {
+       "kind": "Num",
+       "value": 0
+      },
+      "right": {
+       "kind": "Var",
+       "name": "X"
+      }
+     },
+     "then": {
+      "kind": "Assign",
+      "target": "X",
+      "value": {
+       "kind": "BinOp",
+       "op": "-",
+       "left": {
+        "kind": "Num",
+        "value": 0
+       },
+       "right": {
+        "kind": "Var",
+        "name": "X"
+       }
+      }
+     },
+     "orelse": {
+      "kind": "Skip"
+     }
+    }
+   }
+  }
+ }
+}

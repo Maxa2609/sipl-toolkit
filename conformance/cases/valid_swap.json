@@ -1,0 +1,20 @@
+{
+ "name": "valid/swap",
+ "source": "/* swap X and Y through a temporary */\nbegin\n  T := X; X := Y; Y := T\nend\n",
+ "expect": {
+  "runs": [
+   {
+    "state": {
+     "X": 1,
+     "Y": 2
+    },
+    "final_state": {
+     "X": 2,
+     "Y": 1,
+     "T": 1
+    }
+   }
+  ],
+  "term": "AS_T(X⇒) · AS_X(Y⇒) · AS_Y(T⇒)"
+ }
+}

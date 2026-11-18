@@ -1,0 +1,20 @@
+{
+ "name": "ext/short_circuit",
+ "source": "begin if Y <> 0 and X div Y > 1 then Z := 1 else Z := 2 end",
+ "expect": {
+  "runs": [
+   {
+    "state": {
+     "X": 5,
+     "Y": 0
+    },
+    "final_state": {
+     "X": 5,
+     "Y": 0,
+     "Z": 2
+    }
+   }
+  ]
+ },
+ "extensions": true
+}

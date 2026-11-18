@@ -1,0 +1,12 @@
+{
+ "name": "runtime/undefined_var",
+ "source": "begin X := Y end",
+ "expect": {
+  "runs": [
+   {
+    "state": {},
+    "error": "RT-UNDEFINED-VAR"
+   }
+  ]
+ }
+}

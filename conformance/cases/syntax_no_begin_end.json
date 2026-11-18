@@ -1,0 +1,11 @@
+{
+ "name": "syntax/no_begin_end",
+ "source": "X := 1",
+ "expect": {
+  "syntax_error": {
+   "code": "SYN-UNEXPECTED-TOKEN",
+   "line": 1,
+   "col": 1
+  }
+ }
+}

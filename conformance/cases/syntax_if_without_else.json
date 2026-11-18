@@ -1,0 +1,11 @@
+{
+ "name": "syntax/if_without_else",
+ "source": "begin if X > 0 then X := 1 end",
+ "expect": {
+  "syntax_error": {
+   "code": "SYN-UNEXPECTED-TOKEN",
+   "line": 1,
+   "col": 28
+  }
+ }
+}

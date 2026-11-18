@@ -1,0 +1,22 @@
+{
+ "name": "valid/multiplication",
+ "source": "// P := A * B додаванням, вкладені цикли\nbegin\n  P := 0; I := 0;\n  while A > I do\n  begin\n    J := 0;\n    while B > J do begin P := P + 1; J := J + 1 end;\n    I := I + 1\n  end\nend\n",
+ "expect": {
+  "runs": [
+   {
+    "state": {
+     "A": 3,
+     "B": 4
+    },
+    "final_state": {
+     "A": 3,
+     "B": 4,
+     "P": 12,
+     "I": 3,
+     "J": 4
+    }
+   }
+  ],
+  "term": "AS_P(0) · AS_I(0) · WH(S²(gr, A⇒, I⇒), AS_J(0) · WH(S²(gr, B⇒, J⇒), AS_P(S²(add, P⇒, 1)) · AS_J(S²(add, J⇒, 1))) · AS_I(S²(add, I⇒, 1)))"
+ }
+}

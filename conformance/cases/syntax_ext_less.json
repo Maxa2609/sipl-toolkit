@@ -1,0 +1,11 @@
+{
+ "name": "syntax/ext_less",
+ "source": "begin while X < 5 do X := X + 1 end",
+ "expect": {
+  "syntax_error": {
+   "code": "SYN-EXTENSION",
+   "line": 1,
+   "col": 15
+  }
+ }
+}

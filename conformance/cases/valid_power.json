@@ -1,0 +1,105 @@
+{
+ "name": "valid/power",
+ "source": "// R := X ** Y (Y >= 0); приклад з практикуму\nbegin\n  R := 1;\n  while Y > 0 do\n  begin\n    R := R * X;\n    Y := Y - 1\n  end\nend\n",
+ "expect": {
+  "runs": [
+   {
+    "state": {
+     "X": 2,
+     "Y": 10
+    },
+    "final_state": {
+     "R": 1024,
+     "X": 2,
+     "Y": 0
+    }
+   },
+   {
+    "state": {
+     "X": 5,
+     "Y": 0
+    },
+    "final_state": {
+     "R": 1,
+     "X": 5,
+     "Y": 0
+    }
+   }
+  ],
+  "term": "AS_R(1) · WH(S²(gr, Y⇒, 0), AS_R(S²(mult, R⇒, X⇒)) · AS_Y(S²(sub, Y⇒, 1)))",
+  "ast": {
+   "kind": "Program",
+   "body": {
+    "kind": "Block",
+    "body": {
+     "kind": "Seq",
+     "statements": [
+      {
+       "kind": "Assign",
+       "target": "R",
+       "value": {
+        "kind": "Num",
+        "value": 1
+       }
+      },
+      {
+       "kind": "While",
+       "cond": {
+        "kind": "Compare",
+        "op": ">",
+        "left": {
+         "kind": "Var",
+         "name": "Y"
+        },
+        "right": {
+         "kind": "Num",
+         "value": 0
+        }
+       },
+       "body": {
+        "kind": "Block",
+        "body": {
+         "kind": "Seq",
+         "statements": [
+          {
+           "kind": "Assign",
+           "target": "R",
+           "value": {
+            "kind": "BinOp",
+            "op": "*",
+            "left": {
+             "kind": "Var",
+             "name": "R"
+            },
+            "right": {
+             "kind": "Var",
+             "name": "X"
+            }
+           }
+          },
+          {
+           "kind": "Assign",
+           "target": "Y",
+           "value": {
+            "kind": "BinOp",
+            "op": "-",
+            "left": {
+             "kind": "Var",
+             "name": "Y"
+            },
+            "right": {
+             "kind": "Num",
+             "value": 1
+            }
+           }
+          }
+         ]
+        }
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "name": "valid/skip",
+ "source": "begin skip end\n",
+ "expect": {
+  "runs": [
+   {
+    "state": {
+     "X": 1
+    },
+    "final_state": {
+     "X": 1
+    }
+   }
+  ],
+  "term": "id",
+  "ast": {
+   "kind": "Program",
+   "body": {
+    "kind": "Block",
+    "body": {
+     "kind": "Skip"
+    }
+   }
+  }
+ }
+}

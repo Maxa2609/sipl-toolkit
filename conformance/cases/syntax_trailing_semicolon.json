@@ -1,0 +1,11 @@
+{
+ "name": "syntax/trailing_semicolon",
+ "source": "begin X := 1; end",
+ "expect": {
+  "syntax_error": {
+   "code": "SYN-UNEXPECTED-TOKEN",
+   "line": 1,
+   "col": 15
+  }
+ }
+}

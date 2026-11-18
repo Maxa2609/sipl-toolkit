@@ -1,0 +1,15 @@
+{
+ "name": "ext/div_zero",
+ "source": "begin X := 5 div Y end",
+ "expect": {
+  "runs": [
+   {
+    "state": {
+     "Y": 0
+    },
+    "error": "RT-DIV-ZERO"
+   }
+  ]
+ },
+ "extensions": true
+}

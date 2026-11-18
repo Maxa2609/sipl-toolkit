@@ -1,0 +1,22 @@
+{
+ "name": "valid/conditions",
+ "source": "// складні умови: ∨, ¬, дужки, від'ємне число\nbegin\n  if (X > 0 ∨ Y > 0) ∨ ¬ (Z = 0) then R := X * -2 + Y else R := -1\nend\n",
+ "expect": {
+  "runs": [
+   {
+    "state": {
+     "X": 0,
+     "Y": 0,
+     "Z": 0
+    },
+    "final_state": {
+     "X": 0,
+     "Y": 0,
+     "Z": 0,
+     "R": -1
+    }
+   }
+  ],
+  "term": "IF(S²(or, S²(or, S²(gr, X⇒, 0), S²(gr, Y⇒, 0)), S¹(neg, S²(eq, Z⇒, 0))), AS_R(S²(add, S²(mult, X⇒, -2), Y⇒)), AS_R(-1))"
+ }
+}

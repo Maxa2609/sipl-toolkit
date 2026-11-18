@@ -1,0 +1,11 @@
+{
+ "name": "syntax/ext_div",
+ "source": "begin X := Y div 2 end",
+ "expect": {
+  "syntax_error": {
+   "code": "SYN-EXTENSION",
+   "line": 1,
+   "col": 14
+  }
+ }
+}

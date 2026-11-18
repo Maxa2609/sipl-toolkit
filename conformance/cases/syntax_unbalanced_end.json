@@ -1,0 +1,11 @@
+{
+ "name": "syntax/unbalanced_end",
+ "source": "begin X := 1 end end",
+ "expect": {
+  "syntax_error": {
+   "code": "SYN-UNBALANCED-END",
+   "line": 1,
+   "col": 18
+  }
+ }
+}

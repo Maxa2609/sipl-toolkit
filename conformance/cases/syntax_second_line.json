@@ -1,0 +1,11 @@
+{
+ "name": "syntax/second_line",
+ "source": "begin X := 1;\n Y := ;\nend",
+ "expect": {
+  "syntax_error": {
+   "code": "SYN-EXPECTED-EXPRESSION",
+   "line": 2,
+   "col": 7
+  }
+ }
+}

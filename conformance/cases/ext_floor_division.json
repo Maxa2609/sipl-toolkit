@@ -1,0 +1,21 @@
+{
+ "name": "ext/floor_division",
+ "source": "begin Q := X div Y; R := X mod Y end",
+ "expect": {
+  "runs": [
+   {
+    "state": {
+     "X": -7,
+     "Y": 2
+    },
+    "final_state": {
+     "X": -7,
+     "Y": 2,
+     "Q": -4,
+     "R": 1
+    }
+   }
+  ]
+ },
+ "extensions": true
+}

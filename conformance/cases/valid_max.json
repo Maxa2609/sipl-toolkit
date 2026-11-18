@@ -1,0 +1,57 @@
+{
+ "name": "valid/max",
+ "source": "begin\n  if X > Y then M := X else M := Y\nend\n",
+ "expect": {
+  "runs": [
+   {
+    "state": {
+     "X": 3,
+     "Y": 9
+    },
+    "final_state": {
+     "X": 3,
+     "Y": 9,
+     "M": 9
+    }
+   }
+  ],
+  "term": "IF(S²(gr, X⇒, Y⇒), AS_M(X⇒), AS_M(Y⇒))",
+  "ast": {
+   "kind": "Program",
+   "body": {
+    "kind": "Block",
+    "body": {
+     "kind": "If",
+     "cond": {
+      "kind": "Compare",
+      "op": ">",
+      "left": {
+       "kind": "Var",
+       "name": "X"
+      },
+      "right": {
+       "kind": "Var",
+       "name": "Y"
+      }
+     },
+     "then": {
+      "kind": "Assign",
+      "target": "M",
+      "value": {
+       "kind": "Var",
+       "name": "X"
+      }
+     },
+     "orelse": {
+      "kind": "Assign",
+      "target": "M",
+      "value": {
+       "kind": "Var",
+       "name": "Y"
+      }
+     }
+    }
+   }
+  }
+ }
+}

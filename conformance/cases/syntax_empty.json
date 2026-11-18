@@ -1,0 +1,11 @@
+{
+ "name": "syntax/empty",
+ "source": "",
+ "expect": {
+  "syntax_error": {
+   "code": "SYN-EMPTY-PROGRAM",
+   "line": 1,
+   "col": 1
+  }
+ }
+}

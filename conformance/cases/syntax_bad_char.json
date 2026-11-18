@@ -1,0 +1,11 @@
+{
+ "name": "syntax/bad_char",
+ "source": "begin X := 1 @ 2 end",
+ "expect": {
+  "syntax_error": {
+   "code": "SYN-UNEXPECTED-CHAR",
+   "line": 1,
+   "col": 14
+  }
+ }
+}

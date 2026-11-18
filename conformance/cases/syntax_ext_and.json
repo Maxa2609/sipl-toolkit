@@ -1,0 +1,11 @@
+{
+ "name": "syntax/ext_and",
+ "source": "begin while X > 0 and Y > 0 do skip end",
+ "expect": {
+  "syntax_error": {
+   "code": "SYN-EXTENSION",
+   "line": 1,
+   "col": 19
+  }
+ }
+}
