@@ -1,0 +1,6 @@
+// P := 1, якщо X ділиться на Y (X, Y > 0), інакше P := 0; лише + - *
+begin
+  T := X;
+  while T > 0 do T := T - Y;
+  if T = 0 then P := 1 else P := 0
+end

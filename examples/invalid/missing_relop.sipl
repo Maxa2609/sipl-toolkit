@@ -1,0 +1,2 @@
+// error: SYN-EXPECTED-RELOP
+begin if X then skip else skip end

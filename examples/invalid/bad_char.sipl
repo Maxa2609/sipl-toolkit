@@ -1,0 +1,2 @@
+// error: SYN-UNEXPECTED-CHAR
+begin X := 1 @ 2 end

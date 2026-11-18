@@ -1,0 +1,55 @@
+(* SIPL -- SImple Programming Language.  Машинозчитувана граматика (ISO-подібний EBNF).
+   Термінали у лапках; (* ... *) -- коментар граматики; { x } -- 0+ повторень; [ x ] -- необов'язково.
+
+   ЧАСТИНА 1 -- БНФ курсу (практикум, практична робота 1: P1, S1-S6, A1-A6, B1-B5).
+   Це граматика за замовчуванням: рівно її приймає `sipl` без прапорців.
+   ЧАСТИНА 2 -- розширення SIPL-ext. Вмикаються лише прапорцем `--ext` (API: extensions=True). *)
+
+(* ===================== ЧАСТИНА 1: БНФ курсу ===================== *)
+
+program     = "begin" , statement , "end" ;                 (* P1 *)
+
+statement   = assignment                                    (* S1 *)
+            | sequence                                      (* S2 *)
+            | conditional                                   (* S3 *)
+            | loop                                          (* S4 *)
+            | block                                         (* S5 *)
+            | skip ;                                        (* S6 *)
+assignment  = identifier , ":=" , arith ;
+sequence    = statement , ";" , statement ;                 (* ";" -- композиція; S1;S2;S3 розбирається як (S1;S2);S3 *)
+conditional = "if" , cond , "then" , statement , "else" , statement ;
+loop        = "while" , cond , "do" , statement ;
+block       = "begin" , statement , "end" ;
+skip        = "skip" ;
+
+arith       = number | identifier                           (* A1, A2 *)
+            | arith , "+" , arith | arith , "-" , arith     (* A3, A4 *)
+            | arith , "*" , arith                           (* A5 *)
+            | "(" , arith , ")" ;                           (* A6 *)
+cond        = arith , "=" , arith | arith , ">" , arith     (* B1, B2 *)
+            | cond , ( "or" | "∨" ) , cond                  (* B3 *)
+            | ( "not" | "¬" ) , cond                        (* B4 *)
+            | "(" , cond , ")" ;                            (* B5 *)
+
+number      = [ "-" ] , digit , { digit } ;                 (* n ::= ... -1 | 0 | 1 ... *)
+identifier  = ( letter | "_" ) , { letter | digit | "_" } ; (* крім ключових слів *)
+
+(* Однозначність (як вимагає практикум): * сильніше за + -; + - * лівоасоціативні;
+   not сильніше за or; ";" слабше за if/while (тіло циклу з кількох операторів -- через begin ... end). *)
+
+(* ===================== ЧАСТИНА 2: розширення SIPL-ext (--ext) ===================== *)
+
+program_ext = statement_ext , { ";" , statement_ext } ;     (* програма без зовнішнього begin ... end *)
+conditional_ext = "if" , cond_ext , "then" , statement_ext , [ "else" , statement_ext ] ;  (* else необов'язковий = skip *)
+arith_ext   = arith , ( "div" | "mod" ) , arith             (* цілочисельні div, mod (з округленням до -inf) *)
+            | "-" , arith ;                                 (* унарний мінус перед не-числом *)
+cond_ext    = arith , ( "<" | "<=" | ">=" | "<>" | "!=" ) , arith
+            | cond_ext , "and" , cond_ext
+            | "true" | "false" ;
+
+(* ===================== Лексика ===================== *)
+letter      = "A" | ... | "Z" | "a" | ... | "z" ;
+digit       = "0" | ... | "9" ;
+(* Пробіли ігноруються. Коментарі (лексичне зручність): "//" до кінця рядка та "/*" ... "*/".
+   Ключові слова (регістрочутливі): begin end if then else while do skip
+                                    and or not true false div mod *)

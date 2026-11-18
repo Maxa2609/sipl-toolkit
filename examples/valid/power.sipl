@@ -1,0 +1,9 @@
+// R := X ** Y (Y >= 0); приклад з практикуму
+begin
+  R := 1;
+  while Y > 0 do
+  begin
+    R := R * X;
+    Y := Y - 1
+  end
+end

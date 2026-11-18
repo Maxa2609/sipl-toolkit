@@ -1,0 +1,2 @@
+// error: SYN-UNBALANCED-END
+begin X := 1 end end

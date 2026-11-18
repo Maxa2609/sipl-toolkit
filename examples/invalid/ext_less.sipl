@@ -1,0 +1,2 @@
+// error: SYN-EXTENSION
+begin while X < 5 do X := X + 1 end

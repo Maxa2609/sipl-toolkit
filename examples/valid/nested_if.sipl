@@ -1,0 +1,4 @@
+// знак числа: S := 1, 0 або -1
+begin
+  if X > 0 then S := 1 else if X = 0 then S := 0 else S := -1
+end

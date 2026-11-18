@@ -1,0 +1,2 @@
+// error: SYN-EXTENSION
+begin while true do skip end

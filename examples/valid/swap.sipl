@@ -1,0 +1,4 @@
+/* swap X and Y through a temporary */
+begin
+  T := X; X := Y; Y := T
+end

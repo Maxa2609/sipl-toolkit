@@ -1,0 +1,5 @@
+// SIPL-ext: програма без begin/end, div, mod, унарний мінус, <=, >=, and, <>, true/false, if без else
+Q := X div Y; R := X mod Y; W := -Y;
+if Q <= 5 and R <> 0 then Z := 1;
+if R >= 2 then Z := 2 else skip;
+while false do skip

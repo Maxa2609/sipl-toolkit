@@ -1,0 +1,4 @@
+// X := |X|
+begin
+  if 0 > X then X := 0 - X else skip
+end

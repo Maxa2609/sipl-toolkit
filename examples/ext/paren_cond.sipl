@@ -1,0 +1,1 @@
+while (X + 1) * 2 > 3 and (X < 10) do X := X + 1

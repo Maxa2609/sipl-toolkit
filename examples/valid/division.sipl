@@ -1,0 +1,5 @@
+// Q, R: X = Q * Y + R, повторним відніманням (X >= 0, Y > 0)
+begin
+  Q := 0; R := X;
+  while R + 1 > Y do begin R := R - Y; Q := Q + 1 end
+end

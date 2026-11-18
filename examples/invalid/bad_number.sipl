@@ -1,0 +1,2 @@
+// error: SYN-BAD-NUMBER
+begin X := 12abc end

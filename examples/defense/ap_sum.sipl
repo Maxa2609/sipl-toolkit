@@ -1,0 +1,10 @@
+// S := 3 + 6 + ... + 3N (N > 0), лише + і -
+begin
+  S := 0; T := 0; I := 0;
+  while N > I do
+  begin
+    T := T + 3;
+    S := S + T;
+    I := I + 1
+  end
+end

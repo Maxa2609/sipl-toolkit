@@ -1,0 +1,10 @@
+// P := A * B додаванням, вкладені цикли
+begin
+  P := 0; I := 0;
+  while A > I do
+  begin
+    J := 0;
+    while B > J do begin P := P + 1; J := J + 1 end;
+    I := I + 1
+  end
+end

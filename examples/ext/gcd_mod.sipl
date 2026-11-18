@@ -1,0 +1,7 @@
+// Euclid: A := gcd(A, B)
+while B <> 0 do
+begin
+  T := A mod B;
+  A := B;
+  B := T
+end

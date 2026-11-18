@@ -1,0 +1,2 @@
+// error: SYN-EXPECTED-EXPRESSION
+begin X := end

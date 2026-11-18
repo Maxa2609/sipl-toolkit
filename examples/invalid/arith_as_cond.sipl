@@ -1,0 +1,2 @@
+// error: SYN-EXPECTED-RELOP
+begin while X + 1 do skip end

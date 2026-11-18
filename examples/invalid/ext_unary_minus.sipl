@@ -1,0 +1,2 @@
+// error: SYN-EXTENSION
+begin X := -Y end

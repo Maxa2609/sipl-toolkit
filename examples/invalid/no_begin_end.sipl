@@ -1,0 +1,2 @@
+// error: SYN-UNEXPECTED-TOKEN
+X := 1
